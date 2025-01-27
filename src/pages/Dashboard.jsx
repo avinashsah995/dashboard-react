@@ -31,7 +31,7 @@ const Dashboard = () => {
             {/* bottom */}
             <div className='w-full flex'>
                 {/* left panel */}
-                <div className='h-auto w-24 bg-[#2780e6] flex justify-center items-center'>
+                <div className='h-auto w-24 bg-[#2780e6] lg:flex hidden justify-center items-center'>
                     <SideBar />
                 </div>
                 {/* main content */}
@@ -40,7 +40,9 @@ const Dashboard = () => {
                     <div className='flex gap-2'>
                         <EmployeeCard />
                         <CustomSelect label={'Select School'} />
-                        <CustomSelect label={'Select School'} />
+                        <div className='lg:flex hidden'>
+                            <CustomSelect label={'Select School'} />
+                        </div>
                     </div>
 
                     {/* 2nd */}
@@ -53,43 +55,43 @@ const Dashboard = () => {
                     <div className='flex gap-2 h-auto'>
                         <div className='flex-1 flex flex-col gap-3 h-auto'>
                             {/* 1st */}
-                            <div className="grid grid-cols-3 gap-4 h-auto">
-                                    <ContentPieCard />
-                                    <SyllabusCard />
-                                    <InformationCards />
+                            <div className="grid xl:grid-cols-3 grid-cols-1 gap-4 h-auto">
+                                <ContentPieCard />
+                                <SyllabusCard />
+                                <InformationCards />
                             </div>
 
                             {/* 2nd */}
-                            <div className="grid grid-cols-3 gap-4 h-auto" >
+                            <div className="grid xl:grid-cols-3 grid-cols-1 gap-4 h-auto" >
                                 <div className="col-span-2 grid grid-cols-1 gap-4 ">
                                     <FeeCard />
                                     <AdmissionCard />
                                 </div>
-                                <div>
+                                <div className="max-lg:col-span-2">
                                     <TaskCard />
                                 </div>
                             </div>
 
                             {/* 3rd */}
-                            <div className="grid grid-cols-3 gap-4 h-auto" >
+                            <div className="grid xl:grid-cols-2 grid-cols-1 gap-4 h-auto" >
                                 <ContentLineCard />
                                 <QueryCard />
                             </div>
 
                             {/* 4th */}
-                            <div className="grid grid-cols-3 gap-4 h-auto">
+                            <div className="grid xl:grid-cols-3 grid-cols-1 gap-4 h-auto">
                                 <TestCard />
                                 <ClassCard />
                                 <TimeTableCard />
                             </div>
 
                             {/* 5th */}
-                            <div className="grid grid-cols-2 gap-4 h-auto">
+                            <div className="grid xl:grid-cols-2 grid-cols-1 gap-4 h-auto">
                                 <StudentCard />
                                 <EmployeeLineCard />
                             </div>
                         </div>
-                        <div className='w-48'>
+                        <div className='w-48 h-full lg:flex hidden'>
                             <RightPanel />
                         </div>
                     </div>

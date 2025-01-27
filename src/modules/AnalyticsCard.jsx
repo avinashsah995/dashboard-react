@@ -7,13 +7,13 @@ const AnalyticsCard = () => {
             {analyticsData.map((item, index) => {
                 const Icon = item.icon;
                 return (
-                    <div key={index} className='flex gap-2'>
+                    <div key={index} className='flex gap-2 items-center'>
                         <div className='p-1 rounded-sm shadow-md bg-white'>
-                        <Icon className="text-[#755dff] w-9 h-9" />
+                        <Icon className="text-[#755dff] xl:w-9 xl:h-9 lg:w-5 lg:h-5 w-4 h-4 " />
                         </div>
-                        <div className='flex flex-col justify-between'>
-                            <p className='text-[16px] font-medium text-[#2780e6]'>{item.number}</p>
-                            <p className='text-[16px] font-normal'>{item.label}</p>
+                        <div className='flex flex-col justify-between '>
+                            <p className='xl:text-[16px] text-[14px] font-medium text-[#2780e6]'>{item.number}</p>
+                            <p className='xl:text-[16px] lg:text-[10px] font-normal lg:block hidden'>{item.label}</p>
                         </div>
                     </div>
                 )
